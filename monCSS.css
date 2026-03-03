@@ -1,0 +1,279 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700;800&display=swap');
+
+:root {
+	--space-1: 8px;
+	--space-2: 16px;
+	--space-3: 24px;
+	--space-4: 32px;
+	--radius-sm: 12px;
+	--radius-md: 16px;
+	--radius-lg: 20px;
+	--line: rgba(140, 206, 255, 0.22);
+	--card: rgba(11, 28, 72, 0.78);
+	--card-2: rgba(8, 22, 57, 0.88);
+}
+
+html {
+	margin: 4%;
+	background: url("Je T'aime.jpg") center/cover no-repeat fixed;
+}
+
+body {
+	position: relative;
+	background-color: transparent;
+	color: #eaf0ff;
+	font: 16px/1.55 "Space Grotesk", "Segoe UI", Arial, sans-serif;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background: rgba(3, 10, 26, 0.35);
+	pointer-events: none;
+	z-index: -1;
+}
+
+::selection {
+	background: #2b4cff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Sora", "Trebuchet MS", Arial, sans-serif;
+	color: #8fcfff;
+	letter-spacing: 0.3px;
+	margin: 0;
+}
+
+h1 {
+	color: #f3f6ff;
+	font-size: clamp(2rem, 4vw, 3rem);
+	font-weight: 800;
+	letter-spacing: 1px;
+	padding-top: var(--space-2);
+	padding-bottom: var(--space-1);
+	border-bottom: 3px solid #4da3ff;
+}
+
+h2 {
+	font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+	font-weight: 700;
+	color: #b7dcff;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+p {
+	font-size: 1rem;
+	margin: 0;
+}
+
+a {
+	color: #8bd3ff;
+	transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+	color: #ffd166;
+	font-style: italic;
+	font-weight: bold;
+}
+
+a:visited {
+	color: #6fd8c6;
+}
+
+#vie,
+#loveYouCard {
+	max-width: 1040px;
+	margin: 0 auto;
+}
+
+#vie {
+	text-align: center;
+	border: none;
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+}
+
+.bio,
+#recompenses,
+#stats,
+#loveYou,
+#loveYouCard,
+.bioFloat {
+	border: 1px solid var(--line);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+
+.bio {
+	background-color: var(--card);
+	margin: var(--space-3);
+	padding: var(--space-2);
+	border-radius: var(--radius-md);
+}
+
+.bio img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	border-radius: var(--radius-sm);
+}
+
+.bioFloat {
+	max-width: 92%;
+	margin: var(--space-2) auto 0 auto;
+	padding: 12px 14px;
+	background-color: rgba(7, 18, 45, 0.92);
+	border-radius: 14px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28);
+}
+
+.bioFloat p {
+	margin-bottom: var(--space-1);
+}
+
+#recompenses,
+#stats {
+	background-color: var(--card);
+	margin: 0 var(--space-3) var(--space-3) var(--space-3);
+	padding: var(--space-2);
+	border-radius: var(--radius-md);
+}
+
+#recompenses h2,
+#stats h2 {
+	margin-bottom: var(--space-2);
+}
+
+.statsGrid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: var(--space-2);
+}
+
+.statItem {
+	background: rgba(5, 14, 37, 0.74);
+	border: 1px solid rgba(141, 206, 255, 0.2);
+	border-radius: 12px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.statItem strong {
+	font-family: "Sora", Arial, sans-serif;
+	font-size: 0.9rem;
+	color: #d6edff;
+}
+
+.statItem span {
+	font-size: 0.92rem;
+	color: #cde6ff;
+}
+
+#loveYouCard {
+	margin-top: 14px;
+	padding: 10px;
+	border-radius: var(--radius-lg);
+	background-color: var(--card-2);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+#loveYou {
+	background-color: rgba(12, 30, 72, 0.8);
+	padding: 14px 16px 12px 16px;
+	border-radius: var(--radius-sm);
+	position: relative;
+}
+
+#loveYou h2 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#loveYou iframe {
+	width: 100%;
+	max-width: 430px;
+	position: absolute;
+	top: 58px;
+	right: 16px;
+	z-index: 2;
+	border-radius: var(--radius-sm);
+}
+
+.loveYouContenu {
+	max-width: 920px;
+	margin: var(--space-1) auto 0 auto;
+	text-align: left;
+	overflow: auto;
+	padding-right: 450px;
+	min-height: 210px;
+}
+
+.loveYouContenu img {
+	float: left;
+	width: 230px;
+	max-width: 45%;
+	height: auto;
+	margin: 0 16px 10px 0;
+	border-radius: var(--radius-sm);
+}
+
+@media (max-width: 980px) {
+	.statsGrid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	#loveYou iframe {
+		position: static;
+		max-width: 100%;
+		margin: 10px auto 0 auto;
+	}
+
+	.loveYouContenu {
+		padding-right: 0;
+		min-height: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	html {
+		margin: 14px;
+	}
+
+	.bio,
+	#recompenses,
+	#stats,
+	#loveYouCard {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.bio,
+	#recompenses,
+	#stats,
+	#loveYou {
+		padding: 12px;
+	}
+
+	.statsGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.loveYouContenu img {
+		float: none;
+		display: block;
+		width: min(250px, 100%);
+		max-width: 100%;
+		margin: 0 auto 12px auto;
+	}
+}
